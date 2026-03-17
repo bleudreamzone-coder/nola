@@ -394,7 +394,7 @@ footer{border-top:1px solid var(--line);padding:48px 32px;position:relative;z-in
     <button class="nl" data-sec="enterprise">Enterprise</button>
     <button class="nl" data-sec="cities">Cities</button>
   </div>
-  <button class="nav-cta" onclick="scrollTo('alvai')">Talk to Alvai →</button>
+  <a href="https://bleu.live" target="_blank" style="margin-left:auto;font-family:var(--sans);font-size:11px;padding:7px 18px;background:var(--gold);color:var(--bg);border-radius:100px;text-decoration:none;letter-spacing:.04em;font-weight:500;transition:all .25s;white-space:nowrap;flex-shrink:0">bleu.live ↗</a>
 </nav>
 
 <main>
@@ -760,16 +760,16 @@ footer{border-top:1px solid var(--line);padding:48px 32px;position:relative;z-in
     </div>
     <div class="sdiv"></div>
     <div class="fade-in">
-      <div class="s-label"><div class="s-label-dot"></div>BLEU Coverage by Parish</div>
+      <div class="s-label"><div class="s-label-dot"></div>NPI Practitioner Coverage by Parish</div>
       <div class="card card-p" style="margin-top:16px">
-        <div class="bar-row"><div class="bar-lbl">Orleans</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">Live</div></div>
-        <div class="bar-row"><div class="bar-lbl">Jefferson</div><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div><div class="bar-val">92%</div></div>
-        <div class="bar-row"><div class="bar-lbl">St. Tammany</div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><div class="bar-val">78%</div></div>
-        <div class="bar-row"><div class="bar-lbl">St. Bernard</div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div><div class="bar-val">65%</div></div>
-        <div class="bar-row"><div class="bar-lbl">Plaquemines</div><div class="bar-track"><div class="bar-fill" style="width:54%"></div></div><div class="bar-val">54%</div></div>
-        <div class="bar-row"><div class="bar-lbl">St. Charles</div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div><div class="bar-val">70%</div></div>
-        <div class="bar-row"><div class="bar-lbl">St. John</div><div class="bar-track"><div class="bar-fill" style="width:61%"></div></div><div class="bar-val">61%</div></div>
-        <div class="bar-row"><div class="bar-lbl">Tangipahoa</div><div class="bar-track"><div class="bar-fill" style="width:48%"></div></div><div class="bar-val">48%</div></div>
+        <div class="bar-row"><div class="bar-lbl">Orleans</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">100%</div></div>
+        <div class="bar-row"><div class="bar-lbl">Jefferson</div><div class="bar-track"><div class="bar-fill" style="width:99%"></div></div><div class="bar-val">99%</div></div>
+        <div class="bar-row"><div class="bar-lbl">St. Tammany</div><div class="bar-track"><div class="bar-fill" style="width:98%"></div></div><div class="bar-val">98%</div></div>
+        <div class="bar-row"><div class="bar-lbl">St. Bernard</div><div class="bar-track"><div class="bar-fill" style="width:98%"></div></div><div class="bar-val">98%</div></div>
+        <div class="bar-row"><div class="bar-lbl">Plaquemines</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div><div class="bar-val">97%</div></div>
+        <div class="bar-row"><div class="bar-lbl">St. Charles</div><div class="bar-track"><div class="bar-fill" style="width:98%"></div></div><div class="bar-val">98%</div></div>
+        <div class="bar-row"><div class="bar-lbl">St. John</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div><div class="bar-val">97%</div></div>
+        <div class="bar-row"><div class="bar-lbl">Tangipahoa</div><div class="bar-track"><div class="bar-fill" style="width:97%"></div></div><div class="bar-val">97%</div></div>
       </div>
     </div>
   </div>
@@ -845,11 +845,18 @@ footer{border-top:1px solid var(--line);padding:48px 32px;position:relative;z-in
         <span class="alvai-pill" onclick="setAlvai('How do I lower my prescription costs in New Orleans?')">💰 Budget</span>
         <span class="alvai-pill" onclick="setAlvai('Tell me about Jazz Bird NOLA wellness circles')">🐦 Jazz Bird</span>
       </div>
-      <div id="alvaiOut" style="display:none;margin-top:18px;padding:20px 22px;background:rgba(155,143,255,.06);border:1px solid rgba(155,143,255,.2);border-radius:14px;animation:alvFadeIn .35s ease both">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <div id="alvaiOut" style="display:none;margin-top:18px;border:1px solid rgba(155,143,255,.2);border-radius:14px;overflow:hidden;animation:alvFadeIn .35s ease both">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(155,143,255,.06);border-bottom:1px solid rgba(155,143,255,.12)">
           <div style="font-family:var(--sans);font-size:9.5px;color:#9B8FFF;letter-spacing:.18em">ALVAI · NEW ORLEANS</div>
           <div style="font-family:var(--sans);font-size:9px;color:rgba(201,168,76,.5);letter-spacing:.1em">Dr. Felicia Stoler, DCN, MS, RDN, FACSM, FAND, Dipl ACLM</div>
-        </div>    <div id="alvaiTxt" style="font-family:var(--serif);font-size:13px;color:var(--muted);line-height:2"></div>
+        </div>
+        <div id="alvaiThread" style="max-height:380px;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:14px"></div>
+        <div style="border-top:1px solid rgba(155,143,255,.12);padding:10px 12px;background:rgba(6,10,18,.6)">
+          <div style="display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:6px 6px 6px 16px">
+            <input class="alvai-input" id="alvaiReply" placeholder="Reply to Alvai..." onkeydown="if(event.key==='Enter')alvaiReply()" style="flex:1;background:none;border:none;outline:none;font-family:var(--sans);font-size:13px;color:var(--text)">
+            <button class="alvai-btn" onclick="alvaiReply()" style="padding:7px 16px;font-size:11px">Send ✦</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="g3 fade-in">
@@ -1128,6 +1135,7 @@ footer{border-top:1px solid var(--line);padding:48px 32px;position:relative;z-in
     <a href="#finance">Finance</a>
     <a href="#enterprise">Enterprise</a>
     <a href="#cities">Cities</a>
+    <a href="https://bleu.live" target="_blank" style="color:var(--gold);font-weight:500">bleu.live ↗</a>
   </div>
   <div class="footer-legal">
     Jazz Bird® NOLA 501(c)(3) · Patent Pending · Bleu Garner · Dr. Felicia Stoler DCN MS RDN FACSM FAND Dipl ACLM<br>
@@ -1267,19 +1275,26 @@ function fmtNola(t) {
     .replace(/\n/g, '<br>');
 }
 
-async function alvaiSend() {
-  var inp = document.getElementById('alvaiIn');
-  var q = inp.value.trim();
-  if (!q) return;
-  inp.value = '';
+function addBubble(role, text) {
+  var thread = document.getElementById('alvaiThread');
+  var div = document.createElement('div');
+  var isUser = role === 'user';
+  div.style.cssText = 'display:flex;flex-direction:column;align-items:' + (isUser ? 'flex-end' : 'flex-start');
+  var bubble = document.createElement('div');
+  bubble.style.cssText = 'max-width:85%;padding:12px 16px;border-radius:' + (isUser ? '14px 14px 4px 14px' : '14px 14px 14px 4px') + ';font-family:var(--serif);font-size:13px;line-height:1.85;' + (isUser ? 'background:rgba(46,196,182,.12);color:var(--text);border:1px solid rgba(46,196,182,.2)' : 'background:rgba(155,143,255,.08);color:var(--muted);border:1px solid rgba(155,143,255,.15)');
+  bubble.innerHTML = text;
+  div.appendChild(bubble);
+  thread.appendChild(div);
+  thread.scrollTop = thread.scrollHeight;
+  return bubble;
+}
 
+async function alvaiCall(q) {
   var out = document.getElementById('alvaiOut');
-  var txt = document.getElementById('alvaiTxt');
   out.style.display = 'block';
-  txt.innerHTML = '<div class="alv-thinking"><span>Alvai is thinking</span><span class="alv-thinking-dots"><span></span><span></span><span></span></span></div>';
-
   nolaHistory.push({ role: 'user', content: q });
-
+  addBubble('user', q);
+  var aiBubble = addBubble('ai', '<div class="alv-thinking"><span>Alvai is thinking</span><span class="alv-thinking-dots"><span></span><span></span><span></span></span></div>');
   var body = {
     message: q,
     history: nolaHistory.slice(-12),
@@ -1291,19 +1306,16 @@ async function alvaiSend() {
       is_traveler: false
     })
   };
-
   try {
     var res = await fetch(ALVAI_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + ALVAI_ANON },
       body: JSON.stringify(body)
     });
-
     var reader = res.body.getReader();
     var decoder = new TextDecoder();
     var full = '', buffer = '';
-    txt.innerHTML = '';
-
+    aiBubble.innerHTML = '';
     while (true) {
       var _r = await reader.read();
       if (_r.done) break;
@@ -1319,18 +1331,35 @@ async function alvaiSend() {
           var p = JSON.parse(d);
           if (p.text || p.content) {
             full += (p.text || p.content);
-            txt.innerHTML = '<p>' + fmtNola(full) + '</p><span class="alv-cursor"></span>';
+            aiBubble.innerHTML = '<p>' + fmtNola(full) + '</p><span class="alv-cursor"></span>';
+            document.getElementById('alvaiThread').scrollTop = 9999;
           }
         } catch (e) {}
       }
     }
-
-    txt.innerHTML = '<p>' + fmtNola(full) + '</p>';
+    aiBubble.innerHTML = '<p>' + fmtNola(full) + '</p>';
     nolaHistory.push({ role: 'assistant', content: full });
-
+    setTimeout(function(){ var r=document.getElementById('alvaiReply'); if(r)r.focus(); }, 100);
   } catch (e) {
-    txt.innerHTML = '<em style="color:var(--dim)">Connection issue -- try again in a moment. Crisis: 988</em>';
+    aiBubble.innerHTML = '<em style="color:var(--dim)">Connection issue -- try again. Crisis: 988</em>';
   }
+}
+
+async function alvaiSend() {
+  var inp = document.getElementById('alvaiIn');
+  var q = inp.value.trim();
+  if (!q) return;
+  inp.value = '';
+  navTo('alvai');
+  await alvaiCall(q);
+}
+
+async function alvaiReply() {
+  var inp = document.getElementById('alvaiReply');
+  var q = inp.value.trim();
+  if (!q) return;
+  inp.value = '';
+  await alvaiCall(q);
 }
 
 function setAlvai(q) {
